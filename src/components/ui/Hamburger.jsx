@@ -11,16 +11,6 @@ const Hamburger = () => {
         <div className={classes.bottom}></div>
       </label>
       <nav className={classes.menu1}>
-        {/* <NavLink
-          to="/work"
-          className={({ isActive }) =>
-            isActive
-              ? `${classes.nav_item_active} ${classes.nav_item}`
-              : `${classes.nav_item}`
-          }
-        >
-          WORK
-        </NavLink> */}
         <NavLink
           to="/about"
           className={({ isActive }) =>

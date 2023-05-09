@@ -1,9 +1,7 @@
 import { NavLink } from "react-router-dom";
-// import Hamburger from "../ui/Hamburger";
-// import InlineLinks from "../ui/InlineLinks";
-
 import { useEffect, useState } from "react";
-import Hamburger from "./ui/Hamburger";
+import Hamburger2 from "./ui/Hamburger2";
+import logo from "../assets/SunshineLogo.png";
 
 const Navbar = () => {
   const [mobileView, setMobileView] = useState();
@@ -12,10 +10,8 @@ const Navbar = () => {
     const handleResize = () => {
       if (window.innerWidth > 900) {
         setMobileView(false);
-        // console.log("not mobile");
       } else if (window.innerWidth < 900) {
         setMobileView(true);
-        // console.log("this is mobile");
       }
     };
     handleResize();
@@ -26,8 +22,13 @@ const Navbar = () => {
   }, []);
 
   return (
-    <div className="fixed top-0 left-0 right-0 flex items-center justify-between bg-blue-900 h-24 px-4 z-10">
+    <div className="fixed top-0 left-0 right-0 flex items-center justify-between bg-blue-800 h-24 px-4 z-10">
       <div className="flex items-center">
+        <img
+          src={logo}
+          alt="Sunshine Coffee Roasters logo"
+          className="w-12 h-12 rounded-full object-cover mr-2"
+        />
         <NavLink to="/" className="text-yellow-400 font-medium text-xl">
           Sunshine Coffee Roasters
         </NavLink>
@@ -64,9 +65,9 @@ const Navbar = () => {
           </li>
         </ul>
       </div>
-      {/* <div className="lg:hidden">
-      <Hamburger />
-    </div> */}
+      <div className="lg:hidden">
+        <Hamburger2 />
+      </div>
     </div>
   );
 };

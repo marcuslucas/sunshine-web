@@ -1,11 +1,19 @@
 import React from "react";
+import image1 from "../assets/espresso-unsplash.jpeg";
+import image2 from "../assets/coffeeBeans.jpeg";
+import image3 from "../assets/pour-unsplash.jpeg";
+import image4 from "../assets/wide-unsplash.jpeg";
 
 const ImageGrid = () => {
   return (
     <div>
-      {/* Big section with text on top of an image */}
-      <div className="relative h-screen bg-gray-800">
-        <div className="absolute inset-0 bg-opacity-75 bg-yellow-300"></div>
+      {/* First Section */}
+      <div className="relative mt-4 h-screen bg-gray-800">
+        <img
+          src={image1}
+          alt="coffee roast"
+          className="absolute inset-0 object-cover w-full h-full"
+        />
         <div className="absolute inset-0 flex justify-center items-center">
           <div className="text-center">
             <h2 className="text-4xl font-bold text-white mb-4">
@@ -20,9 +28,14 @@ const ImageGrid = () => {
       </div>
 
       {/* Two adjacent sections that are half the width and height of the first section */}
+      {/* Right */}
       <div className="flex">
-        <div className="w-1/2 h-screen bg-white relative">
-          <div className="absolute ml-4 mr-4 my-4 inset-0 bg-opacity-75 bg-blue-600"></div>
+        <div className="w-1/2 h-screen bg-white relative ml-4 mr-2 my-4">
+          <img
+            src={image2}
+            alt="coffee roast"
+            className="absolute inset-0 object-cover w-full h-full"
+          />
           <div className="absolute inset-0 flex justify-center items-center">
             <div className="text-center">
               <h2 className="text-4xl font-bold text-white mb-4">
@@ -35,8 +48,13 @@ const ImageGrid = () => {
             </div>
           </div>
         </div>
-        <div className="w-1/2 h-screen bg-white relative">
-          <div className="absolute mr-4 ml-2 my-4 inset-0 bg-opacity-75 bg-green-600"></div>
+        {/* Left */}
+        <div className="w-1/2 h-screen bg-white relative ml-2 mr-4 my-4">
+          <img
+            src={image3}
+            alt="coffee roast"
+            className="absolute inset-0 object-cover w-full h-full"
+          />
           <div className="absolute inset-0 flex justify-center items-center">
             <div className="text-center">
               <h2 className="text-4xl font-bold text-white mb-4">
@@ -53,7 +71,11 @@ const ImageGrid = () => {
 
       {/* One more section that is identical to the first section */}
       <div className="relative h-screen bg-gray-800">
-        <div className="absolute inset-0 bg-opacity-75 bg-yellow-600"></div>
+        <img
+          src={image4}
+          alt="coffee roast"
+          className="absolute inset-0 object-cover w-full h-full"
+        />
         <div className="absolute inset-0 flex justify-center items-center">
           <div className="text-center">
             <h2 className="text-4xl font-bold text-white mb-4">
