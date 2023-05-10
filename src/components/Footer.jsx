@@ -1,81 +1,51 @@
-import React from "react";
+import { FaFacebook, FaInstagram } from "react-icons/fa";
 
 const Footer = () => {
   return (
-    <footer className="bg-gray-800 sm:mt-10 pt-10">
-      <div className="max-w-6xl m-auto text-gray-800 flex flex-wrap justify-left">
-        {/* Get in touch section */}
-        <div className="p-5 w-1/2 sm:w-4/12 md:w-3/12">
-          <div className="text-xs uppercase text-gray-400 font-medium mb-6">
-            Get in Touch
-          </div>
-          <div className="text-white-500 text-sm">
-            <p className="text-white">
-              <span className="text-gray-400 mr-2">
-                <i className="fa fa-map-marker"></i>
-              </span>{" "}
-              1932 Palmer Ave, Larchmont, NY 10538
-            </p>
-            <p className="mt-2 text-white">
-              <span className="text-gray-400 mr-2">
-                <i className="fa fa-envelope"></i>
-              </span>{" "}
+    <footer className="bg-gray-800 text-white mt-4">
+      <div className="container mx-auto flex flex-wrap justify-between py-8">
+        <div className="w-full lg:w-1/2">
+          <h2 className="text-xl font-bold mb-4">Get in Touch</h2>
+          <ul className="text-sm">
+            <li className="mb-2">
+              <i className="fas fa-map-marker-alt mr-2"></i>1932 Palmer Ave,
+              Larchmont, NY 10538
+            </li>
+            <li className="mb-2">
+              <i className="fas fa-envelope mr-2"></i>
               sunshinecoffeeroaster@gmail.com
-            </p>
-            <p className="mt-2 text-white">
-              <span className="text-gray-400 mr-2">
-                <i className="fa fa-envelope"></i>
-              </span>{" "}
-              (914) 341-1899
-            </p>
-          </div>
+            </li>
+            <li>
+              <i className="fas fa-phone mr-2"></i>(914) 341-1899
+            </li>
+          </ul>
         </div>
-
-        {/* Social icons section */}
-        <div className="p-5 w-1/2 sm:w-4/12 md:w-3/12 ">
-          <div className="text-xs uppercase text-gray-400 font-medium mb-6">
-            Social Media
-          </div>
-          <div className="flex text-white">
-            <div className="flex-initial mr-4">
-              <a
-                href="https://www.facebook.com/SunshineCoffeeRoast/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <span className="text-gray-400 hover:text-white">
-                  <i className="fab fa-facebook-square fa-2x"></i>
-                </span>
-                Facebook
-              </a>
-            </div>
-            <div className="flex-initial mr-4">
-              <a
-                href="https://www.instagram.com/sunshineroasters/?hl=en"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <span className="text-gray-400 hover:text-white">
-                  <i className="fab fa-instagram fa-2x"></i>
-                </span>
-                Instagram
-              </a>
-            </div>
+        <div className="w-full lg:w-1/2 text-center">
+          <h2 className="text-xl font-bold mb-4">Socials</h2>
+          <div className="flex justify-center">
+            <a
+              href="https://www.facebook.com/SunshineCoffeeRoast/"
+              target="_blank"
+              rel="noreferrer"
+              className="text-white mx-4 hover:text-gray-400"
+            >
+              <FaFacebook size={32} />
+            </a>
+            <a
+              href="https://www.instagram.com/sunshineroasters/"
+              target="_blank"
+              rel="noreferrer"
+              className="text-white mx-4 hover:text-gray-400"
+            >
+              <FaInstagram size={32} />
+            </a>
           </div>
         </div>
       </div>
-
-      {/* Bottom section */}
-      <div className="pt-2">
-        <div
-          className="flex pb-5 px-3 m-auto pt-5 
-                            border-t border-gray-500 text-gray-400 
-                            text-sm flex-col md:flex-row max-w-6xl"
-        >
-          <div className="mt-2 text-gray-400">
-            © 2023 Sunshine Coffee Roasters
-          </div>
-        </div>
+      <div className="bg-gray-900 py-4">
+        <p className="text-sm text-center text-gray-400">
+          © 2023 Sunshine Coffee Roasters. All rights reserved.
+        </p>
       </div>
     </footer>
   );

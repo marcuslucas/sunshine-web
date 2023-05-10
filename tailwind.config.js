@@ -8,7 +8,12 @@ module.exports = {
     //   yellow: "#FFD12A",
     //   red: "#EF4339",
     // },
-    extend: {},
+    extend: {
+      colors: {
+        sunny: "#FF6347",
+        nav: "#FF904D",
+      },
+    },
   },
   plugins: [],
 };
